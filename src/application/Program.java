@@ -5,17 +5,17 @@
  */
 package application;
 
+import boardgame.Position;
+
 /**
  *
  * @author jaime
  */
 public class Program {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Position pos= new Position(3, 4);
+        System.out.println(pos.toString());
     }
     
 }
