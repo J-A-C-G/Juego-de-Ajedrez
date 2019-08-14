@@ -13,9 +13,9 @@ import chess.Color;
  *
  * @author jaime
  */
-public class king extends ChessPiece{
+public class King extends ChessPiece{
 
-    public king(Board board, Color color) {
+    public King(Board board, Color color) {
         super(board, color);
     }
     //@overrie
