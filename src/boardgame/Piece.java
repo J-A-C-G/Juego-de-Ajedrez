@@ -5,7 +5,7 @@
  */
 package boardgame;
 
-public class Piece {
+public abstract class Piece {
     protected Position position;
     private Board board;
 
@@ -18,6 +18,24 @@ public class Piece {
         return board;
     }
     
+    public abstract boolean[][]possibleMoves();
     
+    //utilizamos un metodo normal para llamar a un metodo abstracto
+    public boolean possibleMove(Position position){
+        return possibleMoves()[position.getRow()][position.getCol()];
+    }
+    
+    public boolean isThereAnyPossibleMove(){
+        boolean[][]mat=possibleMoves();
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat.length; j++) {
+                if(mat[i][j]){
+                    return true;
+                }
+            }
+            
+        }
+        return false;
+    }
     
 }
